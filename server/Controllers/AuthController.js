@@ -50,6 +50,7 @@ export const loginUser = async (req, res) => {
           process.env.JWT_KEY,
           { expiresIn: "1h" }
         );
+
         res.status(200).json({ user, token });
       }
     } else {
