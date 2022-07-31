@@ -2,6 +2,7 @@ import "./App.css";
 import Auth from "./pages/Auth/Auth.jsx";
 import Home from "./pages/home/Home";
 import Profile from "./pages/Profile/Profile.jsx";
+import Chat from "./pages/Chat/chat.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 function App() {
@@ -27,6 +28,10 @@ function App() {
         <Route
           path="/profile/:id"
           element={user ? <Profile /> : <Navigate to="../auth" />}
+        />
+        <Route
+          path="/chat"
+          element={user ? <Chat /> : <Navigate to="../auth" />}
         />
       </Routes>
     </div>
